@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="srBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0055ff"/>
+      <stop offset="100%" stop-color="#003db3"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded App Icon Background -->
+  <rect width="64" height="64" rx="16" fill="url(#srBlueGrad)"/>
+  
+  <!-- Stylized Laptop Screen -->
+  <rect x="14" y="16" width="36" height="24" rx="3" fill="#ffffff" stroke="#002b80" stroke-width="1"/>
+  <rect x="17" y="19" width="30" height="18" rx="1.5" fill="#0f172a"/>
+  
+  <!-- Screen Text / Monogram SR -->
+  <text x="32" y="32.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="900" fill="#38bdf8" text-anchor="middle">SR</text>
+  
+  <!-- Laptop Base -->
+  <path d="M10 42 C10 40 12 40 14 40 L50 40 C52 40 54 40 54 42 L52 45 C52 46.5 50.5 47 48 47 L16 47 C13.5 47 12 46.5 12 45 Z" fill="#e2e8f0"/>
+  <rect x="28" y="41" width="8" height="1.5" rx="0.75" fill="#94a3b8"/>
+</svg>

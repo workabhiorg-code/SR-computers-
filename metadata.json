@@ -1,0 +1,6 @@
+{
+  "name": "S R COMPUTER",
+  "description": "S R COMPUTER - Premier retail computer, laptop, printer, and accessories store in Bhubaneswar, Odisha. Rated 4.9 on Google.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

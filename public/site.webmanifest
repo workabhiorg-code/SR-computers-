@@ -1,0 +1,17 @@
+{
+  "name": "S R COMPUTER - Retail Laptops, Printers & Accessories",
+  "short_name": "S R COMPUTER",
+  "description": "Premier retail computer, laptop, printer, and accessories store in Bhubaneswar, Odisha.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0055ff",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "64x64 128x128 256x256 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

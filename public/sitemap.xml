@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Homepage & Core Storefront -->
+  <url>
+    <loc>https://srcomputer.in/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=1200</image:loc>
+      <image:title>S R COMPUTER Store Bhubaneswar</image:title>
+      <image:caption>S R COMPUTER Retail Store located at Soubhagya Nagar, Baramunda, Bhubaneswar, Odisha</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Laptop Catalog -->
+  <url>
+    <loc>https://srcomputer.in/#laptops</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800</image:loc>
+      <image:title>Brand New Retail Laptops HP Lenovo ASUS Dell</image:title>
+      <image:caption>Laptops with manufacturer warranty at S R COMPUTER Bhubaneswar</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Printers & All-in-Ones -->
+  <url>
+    <loc>https://srcomputer.in/#printers</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1562408590-e32931084e23?w=800</image:loc>
+      <image:title>Laser &amp; Ink Tank Printers Brother Epson Canon</image:title>
+      <image:caption>Auto-duplex and WiFi printers available for immediate store pickup</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Computer Accessories & Peripherals -->
+  <url>
+    <loc>https://srcomputer.in/#accessories</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Customer Video Reviews & Demos -->
+  <url>
+    <loc>https://srcomputer.in/#video-reviews-section</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Google 4.9★ Reviews & Store Profile -->
+  <url>
+    <loc>https://srcomputer.in/#google-reviews</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Store Location, Address & Contact -->
+  <url>
+    <loc>https://srcomputer.in/#contact-us</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>
