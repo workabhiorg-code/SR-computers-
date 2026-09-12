@@ -1,0 +1,22 @@
+# Production Security & Performance Headers for Cloudflare Pages
+
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Immutable caching for Vite static assets
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache manifest, sitemap, and robots
+/robots.txt
+  Cache-Control: public, max-age=86400
+
+/sitemap.xml
+  Cache-Control: public, max-age=86400
+
+/site.webmanifest
+  Cache-Control: public, max-age=86400
