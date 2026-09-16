@@ -95,14 +95,16 @@ export const GOOGLE_REVIEWS: Review[] = [
 ];
 
 export const CATEGORIES = [
-  { id: "sale", name: "Special Deals", isSale: true, icon: "SALE" },
-  { id: "laptops", name: "Brand Laptops", image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=200&auto=format&fit=crop&q=80" },
+  { id: "sale", name: "New Arrivals", isSale: true, icon: "SALE" },
+  { id: "mono", name: "Mono Printers", image: "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=200&auto=format&fit=crop&q=80" },
   { id: "all-in-one", name: "All-in-One Printers", image: "https://images.unsplash.com/photo-1562408590-e32931084e23?w=200&auto=format&fit=crop&q=80" },
-  { id: "inktank", name: "Ink Tank Printers", image: "https://images.unsplash.com/photo-1589492477829-5e65395b66cc?w=200&auto=format&fit=crop&q=80" },
-  { id: "laser", name: "Laser Printers", image: "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=200&auto=format&fit=crop&q=80" },
+  { id: "wifi", name: "Wi-Fi Printers", image: "https://images.unsplash.com/photo-1589492477829-5e65395b66cc?w=200&auto=format&fit=crop&q=80" },
+  { id: "duplexer", name: "Duplexer Printers", image: "https://images.unsplash.com/photo-1562408590-e32931084e23?w=200&auto=format&fit=crop&q=80" },
+  { id: "thermal", name: "Thermal Printers", image: "https://images.unsplash.com/photo-1526738549149-8e07eca6c147?w=200&auto=format&fit=crop&q=80" },
+  { id: "laptops", name: "Brand Laptops", image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=200&auto=format&fit=crop&q=80" },
+  { id: "toners", name: "Original Toners", image: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=200&auto=format&fit=crop&q=80" },
   { id: "accessories", name: "Keyboards & Mice", image: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=200&auto=format&fit=crop&q=80" },
-  { id: "storage", name: "SSD & Storage", image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=200&auto=format&fit=crop&q=80" },
-  { id: "networking", name: "Wi-Fi & Routers", image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=200&auto=format&fit=crop&q=80" }
+  { id: "storage", name: "SSD Storage", image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=200&auto=format&fit=crop&q=80" }
 ];
 
 export const BRANDS: Brand[] = [
@@ -110,19 +112,7 @@ export const BRANDS: Brand[] = [
     id: "hp",
     name: "HP",
     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/HP_logo_2012.svg/300px-HP_logo_2012.svg.png",
-    productImage: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&auto=format&fit=crop&q=80"
-  },
-  {
-    id: "lenovo",
-    name: "Lenovo",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Lenovo_logo_2015.svg/320px-Lenovo_logo_2015.svg.png",
-    productImage: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=300&auto=format&fit=crop&q=80"
-  },
-  {
-    id: "dell",
-    name: "Dell",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dell_Logo.svg/300px-Dell_Logo.svg.png",
-    productImage: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=300&auto=format&fit=crop&q=80"
+    productImage: "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=300&auto=format&fit=crop&q=80"
   },
   {
     id: "brother",
@@ -131,28 +121,40 @@ export const BRANDS: Brand[] = [
     productImage: "https://images.unsplash.com/photo-1562408590-e32931084e23?w=300&auto=format&fit=crop&q=80"
   },
   {
-    id: "epson",
-    name: "Epson",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Epson_logo.svg/320px-Epson_logo.svg.png",
-    productImage: "https://images.unsplash.com/photo-1526738549149-8e07eca6c147?w=300&auto=format&fit=crop&q=80"
-  },
-  {
     id: "canon",
     name: "Canon",
     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Canon_wordmark.svg/320px-Canon_wordmark.svg.png",
     productImage: "https://images.unsplash.com/photo-1589492477829-5e65395b66cc?w=300&auto=format&fit=crop&q=80"
   },
   {
-    id: "logitech",
-    name: "Logitech",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Logitech_logo.svg/320px-Logitech_logo.svg.png",
-    productImage: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=300&auto=format&fit=crop&q=80"
+    id: "samsung",
+    name: "Samsung",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/320px-Samsung_Logo.svg.png",
+    productImage: "https://images.unsplash.com/photo-1526738549149-8e07eca6c147?w=300&auto=format&fit=crop&q=80"
   },
   {
-    id: "crucial",
-    name: "Crucial",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Crucial_Technology_logo.svg/320px-Crucial_Technology_logo.svg.png",
-    productImage: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=300&auto=format&fit=crop&q=80"
+    id: "epson",
+    name: "Epson",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Epson_logo.svg/320px-Epson_logo.svg.png",
+    productImage: "https://images.unsplash.com/photo-1526738549149-8e07eca6c147?w=300&auto=format&fit=crop&q=80"
+  },
+  {
+    id: "ricoh",
+    name: "Ricoh",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Ricoh_logo.svg/320px-Ricoh_logo.svg.png",
+    productImage: "https://images.unsplash.com/photo-1562408590-e32931084e23?w=300&auto=format&fit=crop&q=80"
+  },
+  {
+    id: "dell",
+    name: "Dell",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dell_Logo.svg/300px-Dell_Logo.svg.png",
+    productImage: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&auto=format&fit=crop&q=80"
+  },
+  {
+    id: "lenovo",
+    name: "Lenovo",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Lenovo_logo_2015.svg/320px-Lenovo_logo_2015.svg.png",
+    productImage: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=300&auto=format&fit=crop&q=80"
   }
 ];
 

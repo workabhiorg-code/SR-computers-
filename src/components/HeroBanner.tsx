@@ -15,277 +15,214 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
 }) => {
   const [activeSlide, setActiveSlide] = useState(0);
 
-  // Auto-advance banner every 7s
+  // Auto-advance banner every 8s
   useEffect(() => {
     const timer = setInterval(() => {
       setActiveSlide((prev) => (prev === 0 ? 1 : 0));
-    }, 7000);
+    }, 8000);
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-r from-blue-50 via-sky-50 to-blue-100 border-b border-blue-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-10 md:py-14">
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#1d5cc6] via-[#154fa8] to-[#0c3c86] text-white border-b border-blue-900 shadow-inner">
+      {/* Subtle Background Watermark Tech Icons matching screenshot */}
+      <div className="absolute inset-0 opacity-10 pointer-events-none select-none overflow-hidden">
+        <div className="absolute top-4 left-6 w-12 h-12 border-2 border-white rounded-lg flex items-center justify-center">
+          <ShieldCheck className="w-8 h-8 text-white" />
+        </div>
+        <div className="absolute top-12 left-28 w-14 h-14 border-2 border-white rounded-xl flex items-center justify-center">
+          <Award className="w-9 h-9 text-white" />
+        </div>
+        <div className="absolute top-6 left-52 w-12 h-12 border-2 border-white rounded-lg flex items-center justify-center">
+          <Sparkles className="w-8 h-8 text-white" />
+        </div>
+        <div className="absolute bottom-6 left-16 w-14 h-14 border-2 border-white rounded-lg flex items-center justify-center">
+          <Zap className="w-8 h-8 text-white" />
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-5 sm:py-8 md:py-12 relative z-10">
         
-        {/* SLIDE 0: Retail Computer Store - Bhubaneswar */}
+        {/* SLIDE 0: Find the Right Printer & Laptop in your Budget (Matching Screenshot) */}
         {activeSlide === 0 && (
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center animate-in fade-in duration-500">
-            {/* Left Hero Text matching exact layout and typography */}
-            <div className="lg:col-span-5 flex flex-col items-start z-10">
-              {/* Store Location Pill */}
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/90 backdrop-blur rounded-full text-xs font-semibold text-[#0055ff] mb-3 shadow-xs border border-blue-200">
-                <MapPin className="w-3.5 h-3.5 text-red-500" />
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-6 items-center animate-in fade-in duration-300">
+            
+            {/* Left Column: Headline, Italic Subtitle, 3 Badges, White 'Click to Start' Button */}
+            <div className="md:col-span-6 lg:col-span-7 flex flex-col items-start">
+              
+              {/* Store Pill */}
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-white/15 backdrop-blur-xs rounded-full text-[11px] font-semibold text-blue-100 mb-2 border border-white/20">
+                <MapPin className="w-3 h-3 text-cyan-300 shrink-0" />
                 <span>S R COMPUTER • Bhubaneswar (4.9★)</span>
               </div>
 
-              {/* Primary SEO Heading */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0055ff] tracking-tight leading-tight">
-                Bhubaneswar’s Trusted
-                <span className="sr-only"> Retail Computers, Laptops, Printers &amp; Accessories Store - S R COMPUTER</span>
+              {/* Main Headline */}
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+                Find the right printer <br className="hidden sm:inline" />
+                in <span className="text-cyan-300 underline decoration-cyan-400">your budget.</span>
               </h1>
 
-              {/* "Retail Computers & Printers Store" Pill */}
-              <div className="mt-2.5 inline-block px-4 py-1.5 bg-blue-50/90 border border-blue-200 rounded-full text-lg sm:text-2xl font-bold text-[#0055ff] shadow-xs">
-                Retail Computers & Accessories
-              </div>
-
-              {/* Value Proposition */}
-              <p className="mt-3.5 text-base sm:text-xl font-medium text-slate-700 tracking-wide">
-                100% Brand New. Genuine Warranty. Best Prices.
+              {/* Italic "Let us help you" matching screenshot */}
+              <p className="text-xl sm:text-2xl md:text-3xl font-serif italic text-blue-100 mt-1 sm:mt-2">
+                Let us help you
               </p>
 
-              {/* Google Rating Highlights */}
-              <div className="mt-3 flex items-center gap-3">
+              {/* 3 mini feature badges matching screenshot */}
+              <div className="mt-3.5 sm:mt-5 flex flex-wrap items-center gap-2 sm:gap-4 text-[11px] sm:text-xs text-blue-100 font-medium">
+                <div className="flex items-center gap-1.5 bg-white/10 backdrop-blur-xs px-2.5 py-1 rounded-lg border border-white/15">
+                  <ShieldCheck className="w-3.5 h-3.5 text-cyan-300 shrink-0" />
+                  <span>100% Brand Sealed</span>
+                </div>
+                <div className="flex items-center gap-1.5 bg-white/10 backdrop-blur-xs px-2.5 py-1 rounded-lg border border-white/15">
+                  <Zap className="w-3.5 h-3.5 text-amber-300 shrink-0" />
+                  <span>Easy Setup</span>
+                </div>
+                <div className="flex items-center gap-1.5 bg-white/10 backdrop-blur-xs px-2.5 py-1 rounded-lg border border-white/15">
+                  <Headphones className="w-3.5 h-3.5 text-green-300 shrink-0" />
+                  <span>Reliable Support</span>
+                </div>
+              </div>
+
+              {/* CTA Buttons: White 'Click to Start' button matching screenshot */}
+              <div className="mt-4 sm:mt-6 flex items-center gap-3">
                 <button
-                  onClick={onOpenGoogleProfile}
-                  className="flex items-center gap-1.5 text-xs font-semibold text-gray-700 hover:text-[#0055ff] bg-white px-3 py-1 rounded-full border border-gray-200 shadow-2xs transition"
+                  onClick={onOpenBudgetQuiz}
+                  className="px-6 sm:px-8 py-2.5 sm:py-3 bg-white text-gray-900 font-extrabold text-xs sm:text-sm rounded-lg shadow-lg hover:bg-gray-100 active:scale-95 transition-all border border-gray-300 flex items-center gap-2 cursor-pointer"
+                  id="hero-click-to-start-btn"
                 >
-                  <span className="text-amber-500 font-bold">★★★★★ 4.9</span>
-                  <span>(38 Google Reviews)</span>
+                  <span>Click to Start</span>
+                  <ChevronRight className="w-4 h-4 text-gray-900" />
                 </button>
-                <div className="flex items-center gap-1 text-xs text-green-700 font-medium">
-                  <ShieldCheck className="w-4 h-4 text-green-600" />
-                  <span>Official Brand Warranty</span>
+
+                <button
+                  onClick={onShopClick}
+                  className="px-4 sm:px-5 py-2.5 sm:py-3 bg-blue-600/80 hover:bg-blue-600 active:scale-95 text-white font-bold text-xs sm:text-sm rounded-lg border border-white/20 transition cursor-pointer"
+                  id="hero-browse-store-btn"
+                >
+                  Browse Store
+                </button>
+              </div>
+
+            </div>
+
+            {/* Right Column: Desk Setup with Modern Printer & Advisor */}
+            <div className="md:col-span-6 lg:col-span-5 relative flex items-center justify-center pt-2 md:pt-0">
+              <div className="relative w-full max-w-sm sm:max-w-md bg-white/10 backdrop-blur-md rounded-2xl p-3 sm:p-4 border border-white/20 shadow-2xl flex items-center justify-center">
+                <div className="relative w-full aspect-4/3 sm:aspect-16/10 rounded-xl overflow-hidden bg-gradient-to-t from-black/40 via-transparent to-transparent flex items-end justify-center">
+                  <img
+                    src="https://images.unsplash.com/photo-1562408590-e32931084e23?w=800&auto=format&fit=crop&q=80"
+                    alt="Multi-Function Brand New Printer"
+                    className="absolute inset-0 w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-500"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div className="relative z-10 w-full p-2 sm:p-3 bg-gradient-to-t from-slate-950/90 via-slate-900/60 to-transparent flex items-center justify-between">
+                    <div>
+                      <p className="text-xs font-bold text-white leading-tight">Brother & Epson All-in-Ones</p>
+                      <p className="text-[10px] text-cyan-300">Brand New • GST Bill & Warranty</p>
+                    </div>
+                    <span className="text-[10px] bg-green-500 text-white font-black px-2 py-0.5 rounded-full shadow-xs">
+                      In Stock
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        )}
+
+        {/* SLIDE 1: Retail Laptop & Accessories Showcase */}
+        {activeSlide === 1 && (
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-6 items-center animate-in fade-in duration-300">
+            {/* Left Column */}
+            <div className="md:col-span-6 lg:col-span-7 flex flex-col items-start">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-white/15 backdrop-blur-xs rounded-full text-[11px] font-semibold text-blue-100 mb-2 border border-white/20">
+                <Sparkles className="w-3 h-3 text-amber-300 shrink-0" />
+                <span>Top Brand Laptops & Peripherals</span>
+              </div>
+
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+                Laptops for Students <br className="hidden sm:inline" />
+                &amp; <span className="text-cyan-300">Office Work</span>
+              </h2>
+
+              <p className="text-xl sm:text-2xl md:text-3xl font-serif italic text-blue-100 mt-1 sm:mt-2">
+                Factory Sealed with Brand Warranty
+              </p>
+
+              {/* Highlights */}
+              <div className="mt-3.5 sm:mt-5 flex flex-wrap items-center gap-2 sm:gap-4 text-[11px] sm:text-xs text-blue-100 font-medium">
+                <div className="flex items-center gap-1.5 bg-white/10 backdrop-blur-xs px-2.5 py-1 rounded-lg border border-white/15">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-cyan-300 shrink-0" />
+                  <span>HP • Lenovo • Dell</span>
+                </div>
+                <div className="flex items-center gap-1.5 bg-white/10 backdrop-blur-xs px-2.5 py-1 rounded-lg border border-white/15">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-amber-300 shrink-0" />
+                  <span>Free Data Transfer</span>
                 </div>
               </div>
 
               {/* CTA Buttons */}
-              <div className="mt-6 sm:mt-8 flex flex-wrap items-center gap-3">
+              <div className="mt-4 sm:mt-6 flex items-center gap-3">
                 <button
                   onClick={onShopClick}
-                  className="px-7 py-3 bg-white hover:bg-blue-50 text-[#0055ff] font-bold text-base sm:text-lg rounded-xl shadow-md hover:shadow-lg border border-blue-200 transition-all transform hover:-translate-y-0.5 flex items-center gap-2"
-                  id="hero-print-smart-btn"
+                  className="px-6 sm:px-8 py-2.5 sm:py-3 bg-white text-gray-900 font-extrabold text-xs sm:text-sm rounded-lg shadow-lg hover:bg-gray-100 active:scale-95 transition-all border border-gray-300 flex items-center gap-2 cursor-pointer"
                 >
-                  <span>Explore Catalog</span>
-                  <ChevronRight className="w-5 h-5 text-[#0055ff]" />
+                  <span>Explore Laptops</span>
+                  <ChevronRight className="w-4 h-4 text-gray-900" />
                 </button>
 
                 <a
                   href={`tel:${STORE_INFO.phone}`}
-                  className="px-5 py-3 bg-[#0055ff] hover:bg-[#0044cc] text-white font-semibold text-sm sm:text-base rounded-xl shadow-md transition flex items-center gap-2"
-                  id="hero-call-store-btn"
+                  className="px-4 sm:px-5 py-2.5 sm:py-3 bg-blue-600/80 hover:bg-blue-600 active:scale-95 text-white font-bold text-xs sm:text-sm rounded-lg border border-white/20 transition flex items-center gap-1.5"
                 >
-                  <Phone className="w-4 h-4" />
+                  <Phone className="w-3.5 h-3.5" />
                   <span>Call Store</span>
                 </a>
               </div>
             </div>
 
-            {/* Right Product Showcase: Multi-tiered podium setup */}
-            <div className="lg:col-span-7 relative flex items-center justify-center pt-4 lg:pt-0">
-              <div className="relative w-full max-w-2xl">
-                <div className="relative bg-gradient-to-b from-blue-50/80 to-white p-4 sm:p-6 rounded-3xl border border-blue-200/70 shadow-xl backdrop-blur-xs">
-                  
-                  {/* Visual arrangement of laptops and printers */}
-                  <div className="grid grid-cols-3 gap-3 sm:gap-4 items-end">
-                    
-                    {/* Left: HP Laptop */}
-                    <div className="flex flex-col items-center group">
-                      <div className="relative bg-white rounded-2xl p-2 sm:p-3 shadow-md border border-gray-100 w-full transition-transform group-hover:scale-105">
-                        <div className="absolute top-2 left-2 bg-blue-600 text-white text-[9px] font-bold px-1.5 py-0.5 rounded">
-                          HP
-                        </div>
-                        <img
-                          src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&auto=format&fit=crop&q=80"
-                          alt="HP Brand New Laptop"
-                          className="w-full h-24 sm:h-36 object-contain rounded-lg"
-                          referrerPolicy="no-referrer"
-                        />
-                      </div>
-                      <div className="w-full h-8 sm:h-12 bg-blue-100 rounded-b-xl -mt-2 flex items-center justify-center shadow-inner text-center px-1">
-                        <span className="text-[10px] sm:text-xs font-bold text-blue-900">HP 15s Thin & Light</span>
-                      </div>
-                    </div>
-
-                    {/* Center: Brother All-in-One (Elevated) */}
-                    <div className="flex flex-col items-center -translate-y-2 sm:-translate-y-4 group">
-                      <div className="relative bg-white rounded-2xl p-2 sm:p-3 shadow-lg border-2 border-[#0055ff]/30 w-full transition-transform group-hover:scale-105">
-                        <div className="absolute top-2 left-2 bg-[#0055ff] text-white text-[9px] font-bold px-1.5 py-0.5 rounded">
-                          Brother
-                        </div>
-                        <div className="absolute top-2 right-2 bg-amber-400 text-gray-900 text-[9px] font-black px-1.5 py-0.5 rounded">
-                          Bestseller
-                        </div>
-                        <img
-                          src="https://images.unsplash.com/photo-1562408590-e32931084e23?w=400&auto=format&fit=crop&q=80"
-                          alt="Brother Auto-Duplex Printer"
-                          className="w-full h-28 sm:h-44 object-contain rounded-lg"
-                          referrerPolicy="no-referrer"
-                        />
-                      </div>
-                      <div className="w-full h-10 sm:h-14 bg-[#0055ff] rounded-b-xl -mt-2 flex flex-col items-center justify-center text-white shadow-md text-center px-1">
-                        <span className="text-[10px] sm:text-xs font-bold">Auto Duplex Laser</span>
-                        <span className="text-[9px] text-blue-200 hidden sm:inline">1 Year Brand Warranty</span>
-                      </div>
-                    </div>
-
-                    {/* Right: Epson EcoTank */}
-                    <div className="flex flex-col items-center group">
-                      <div className="relative bg-white rounded-2xl p-2 sm:p-3 shadow-md border border-gray-100 w-full transition-transform group-hover:scale-105">
-                        <div className="absolute top-2 left-2 bg-red-600 text-white text-[9px] font-bold px-1.5 py-0.5 rounded">
-                          Epson
-                        </div>
-                        <img
-                          src="https://images.unsplash.com/photo-1526738549149-8e07eca6c147?w=400&auto=format&fit=crop&q=80"
-                          alt="Epson EcoTank Color Printer"
-                          className="w-full h-24 sm:h-36 object-contain rounded-lg"
-                          referrerPolicy="no-referrer"
-                        />
-                      </div>
-                      <div className="w-full h-8 sm:h-12 bg-blue-100 rounded-b-xl -mt-2 flex items-center justify-center shadow-inner text-center px-1">
-                        <span className="text-[10px] sm:text-xs font-bold text-blue-900">Epson EcoTank L3210</span>
-                      </div>
-                    </div>
-
-                  </div>
-
-                  {/* Trust guarantee banner below podiums */}
-                  <div className="mt-4 pt-3 border-t border-blue-200 flex items-center justify-around text-center">
-                    <div className="flex items-center gap-1 text-[11px] text-slate-600 font-medium">
-                      <ShieldCheck className="w-4 h-4 text-[#0055ff]" />
-                      <span>100% Genuine Boxed</span>
-                    </div>
-                    <div className="flex items-center gap-1 text-[11px] text-slate-600 font-medium">
-                      <Award className="w-4 h-4 text-[#0055ff]" />
-                      <span>Manufacturer Warranty</span>
-                    </div>
-                    <div className="flex items-center gap-1 text-[11px] text-slate-600 font-medium">
-                      <Sparkles className="w-4 h-4 text-[#0055ff]" />
-                      <span>Free Demo & Setup</span>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* SLIDE 1: Find the right laptop or printer in your budget */}
-        {activeSlide === 1 && (
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center animate-in fade-in duration-500">
-            {/* Left Column */}
-            <div className="lg:col-span-6 flex flex-col items-start z-10">
-              
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-blue-600 text-white rounded-full text-xs font-bold mb-3 shadow-xs">
-                <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-                <span>Smart Retail Tech Advisor</span>
-              </div>
-
-              {/* Headline */}
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-tight leading-tight">
-                Find the <span className="text-[#0055ff]">right device</span> in <span className="underline decoration-blue-500">your budget</span>.
-              </h2>
-
-              <p className="text-2xl sm:text-3xl font-serif italic text-slate-700 mt-2">
-                Let us help you choose
-              </p>
-
-              {/* 3 feature badges: Brand New Sealed, Easy Setup, Reliable Support */}
-              <div className="mt-5 grid grid-cols-3 gap-3 w-full max-w-md">
-                <div className="flex items-center gap-2 p-2.5 bg-white/90 rounded-xl border border-blue-200 text-xs font-bold text-gray-800 shadow-2xs">
-                  <ShieldCheck className="w-4 h-4 text-[#0055ff] shrink-0" />
-                  <span>100% Brand New</span>
-                </div>
-                <div className="flex items-center gap-2 p-2.5 bg-white/90 rounded-xl border border-blue-200 text-xs font-bold text-gray-800 shadow-2xs">
-                  <Zap className="w-4 h-4 text-amber-500 shrink-0" />
-                  <span>On-Spot Demo</span>
-                </div>
-                <div className="flex items-center gap-2 p-2.5 bg-white/90 rounded-xl border border-blue-200 text-xs font-bold text-gray-800 shadow-2xs">
-                  <Headphones className="w-4 h-4 text-green-600 shrink-0" />
-                  <span>Retail Support</span>
-                </div>
-              </div>
-
-              {/* CTA Buttons */}
-              <div className="mt-6 sm:mt-8 flex items-center gap-3">
-                <button
-                  onClick={onOpenBudgetQuiz}
-                  className="px-8 py-3.5 bg-white hover:bg-gray-50 text-gray-900 font-extrabold text-base sm:text-lg rounded-2xl shadow-lg border-2 border-gray-800 transition-transform transform hover:scale-105 flex items-center gap-2"
-                  id="hero-click-to-start-btn"
-                >
-                  <span>Find My Device</span>
-                  <ChevronRight className="w-5 h-5 text-gray-900" />
-                </button>
-
-                <button
-                  onClick={onShopClick}
-                  className="px-6 py-3.5 bg-[#0055ff] hover:bg-[#0044cc] text-white font-bold text-sm sm:text-base rounded-2xl shadow-md transition"
-                >
-                  Browse Retail Store
-                </button>
-              </div>
-
-            </div>
-
-            {/* Right Column: Laptops and Printers showcase */}
-            <div className="lg:col-span-6 relative flex items-center justify-center">
-              <div className="relative w-full max-w-xl bg-white/80 rounded-3xl p-6 border border-blue-200 shadow-xl backdrop-blur-xs flex flex-col sm:flex-row items-center gap-6">
-                <div className="w-full sm:w-1/2 flex flex-col items-center">
+            {/* Right Column: Laptops Showcase */}
+            <div className="md:col-span-6 lg:col-span-5 relative flex items-center justify-center pt-2 md:pt-0">
+              <div className="relative w-full max-w-sm sm:max-w-md bg-white/10 backdrop-blur-md rounded-2xl p-3 sm:p-4 border border-white/20 shadow-2xl flex items-center justify-center">
+                <div className="relative w-full aspect-4/3 sm:aspect-16/10 rounded-xl overflow-hidden bg-gradient-to-t from-black/40 via-transparent to-transparent flex items-end justify-center">
                   <img
-                    src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&auto=format&fit=crop&q=80"
-                    alt="Brand New Laptop"
-                    className="w-full h-44 object-contain rounded-xl"
+                    src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&auto=format&fit=crop&q=80"
+                    alt="HP & Lenovo Student Laptops"
+                    className="absolute inset-0 w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-500"
+                    referrerPolicy="no-referrer"
                   />
-                  <span className="text-xs font-bold text-gray-800 mt-2 text-center">HP & Lenovo Student Laptops</span>
-                  <span className="text-[11px] text-green-700 font-semibold">From ₹35,990 with Brand Warranty</span>
-                </div>
-
-                <div className="w-full sm:w-1/2 space-y-2 border-t sm:border-t-0 sm:border-l border-blue-100 pt-4 sm:pt-0 sm:pl-4 text-xs text-gray-600">
-                  <div className="font-bold text-gray-900 text-sm">Why Bhubaneswar Chooses Us:</div>
-                  <div className="flex items-start gap-1.5">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-green-600 shrink-0 mt-0.5" />
-                    <span>Brand new factory-sealed units with GST invoice</span>
-                  </div>
-                  <div className="flex items-start gap-1.5">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-green-600 shrink-0 mt-0.5" />
-                    <span>Expert advice to choose the best laptop for studies</span>
-                  </div>
-                  <div className="flex items-start gap-1.5">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-green-600 shrink-0 mt-0.5" />
-                    <span>Doorstep delivery across Odisha or Baramunda pickup</span>
+                  <div className="relative z-10 w-full p-2 sm:p-3 bg-gradient-to-t from-slate-950/90 via-slate-900/60 to-transparent flex items-center justify-between">
+                    <div>
+                      <p className="text-xs font-bold text-white leading-tight">HP & Lenovo Thin & Light</p>
+                      <p className="text-[10px] text-cyan-300">From ₹36,490 • Onsite Warranty</p>
+                    </div>
+                    <span className="text-[10px] bg-cyan-400 text-gray-950 font-black px-2 py-0.5 rounded-full shadow-xs">
+                      Best Price
+                    </span>
                   </div>
                 </div>
               </div>
             </div>
+
           </div>
         )}
 
-        {/* Carousel Dots indicator matching screenshot */}
-        <div className="flex items-center justify-center gap-2 mt-6">
+        {/* Carousel Dots indicator */}
+        <div className="flex items-center justify-center gap-2 mt-4 sm:mt-6">
           <button
             onClick={() => setActiveSlide(0)}
-            className={`h-2.5 rounded-full transition-all ${
-              activeSlide === 0 ? 'w-8 bg-[#0055ff] shadow' : 'w-2.5 bg-blue-300 hover:bg-blue-400'
+            className={`h-2 rounded-full transition-all cursor-pointer ${
+              activeSlide === 0 ? 'w-6 bg-white shadow' : 'w-2 bg-white/40 hover:bg-white/60'
             }`}
-            aria-label="Slide 1: India's Most Trusted"
+            aria-label="Slide 1: Find the right printer in your budget"
           />
           <button
             onClick={() => setActiveSlide(1)}
-            className={`h-2.5 rounded-full transition-all ${
-              activeSlide === 1 ? 'w-8 bg-[#0055ff] shadow' : 'w-2.5 bg-blue-300 hover:bg-blue-400'
+            className={`h-2 rounded-full transition-all cursor-pointer ${
+              activeSlide === 1 ? 'w-6 bg-white shadow' : 'w-2 bg-white/40 hover:bg-white/60'
             }`}
-            aria-label="Slide 2: Budget Finder Wizard"
+            aria-label="Slide 2: Laptops for students"
           />
         </div>
 

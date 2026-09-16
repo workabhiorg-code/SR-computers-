@@ -11,12 +11,12 @@ export const BrandBar: React.FC<BrandBarProps> = ({
   onSelectBrand
 }) => {
   return (
-    <section className="bg-white py-8 border-b border-gray-100">
+    <section className="bg-white py-5 sm:py-8 border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* Section title matching screenshot */}
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 tracking-tight">
+        <div className="flex items-center justify-between mb-3.5 sm:mb-6">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 tracking-tight">
             Explore Trusted Printer Brands
           </h2>
           {selectedBrand && (
@@ -24,13 +24,13 @@ export const BrandBar: React.FC<BrandBarProps> = ({
               onClick={() => onSelectBrand(null)}
               className="text-xs font-semibold text-[#0055ff] hover:underline"
             >
-              Clear filter ({selectedBrand})
+              Clear ({selectedBrand})
             </button>
           )}
         </div>
 
-        {/* Brand cards row matching screenshot: rounded rectangle with logo + product image + brand label */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-3 sm:gap-4">
+        {/* Brand cards: Horizontal scroll on mobile with swipe momentum, grid on tablet/desktop */}
+        <div className="flex overflow-x-auto no-scrollbar sm:grid sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3 sm:gap-4 pb-2 sm:pb-0 scroll-smooth">
           {BRANDS.map((brand) => {
             const isSelected = selectedBrand === brand.name;
 
@@ -38,7 +38,7 @@ export const BrandBar: React.FC<BrandBarProps> = ({
               <button
                 key={brand.id}
                 onClick={() => onSelectBrand(isSelected ? null : brand.name)}
-                className={`flex flex-col items-center justify-between p-3 rounded-2xl border transition-all duration-200 group focus:outline-none ${
+                className={`flex flex-col items-center justify-between p-2.5 sm:p-3 rounded-2xl border transition-all duration-200 group focus:outline-none shrink-0 w-28 sm:w-auto ${
                   isSelected
                     ? 'bg-blue-50 border-[#0055ff] ring-2 ring-[#0055ff]/20 shadow-sm'
                     : 'bg-white border-gray-200 hover:border-gray-300 hover:shadow-sm'
@@ -46,8 +46,8 @@ export const BrandBar: React.FC<BrandBarProps> = ({
                 id={`brand-card-${brand.id}`}
               >
                 {/* Brand Logo Header */}
-                <div className="h-6 flex items-center justify-center w-full px-2 mb-2">
-                  <span className={`font-black text-sm tracking-wider uppercase ${
+                <div className="h-5 flex items-center justify-center w-full px-1 mb-1.5">
+                  <span className={`font-black text-xs sm:text-sm tracking-wider uppercase ${
                     brand.name === 'Brother' ? 'text-[#00529b]' :
                     brand.name === 'Canon' ? 'text-[#c70000]' :
                     brand.name === 'Samsung' ? 'text-[#034ea2]' :
@@ -62,7 +62,7 @@ export const BrandBar: React.FC<BrandBarProps> = ({
                 </div>
 
                 {/* Brand Product Image in rounded container */}
-                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-xl flex items-center justify-center p-1.5 overflow-hidden bg-gray-50/70 group-hover:bg-white transition">
+                <div className="w-18 h-18 sm:w-22 sm:h-22 rounded-xl flex items-center justify-center p-1 overflow-hidden bg-gray-50/70 group-hover:bg-white transition">
                   <img
                     src={brand.productImage}
                     alt={`${brand.name} Printer`}
@@ -72,7 +72,7 @@ export const BrandBar: React.FC<BrandBarProps> = ({
                 </div>
 
                 {/* Brand Name at bottom */}
-                <span className={`mt-2 text-xs font-semibold ${
+                <span className={`mt-1.5 text-[11px] sm:text-xs font-semibold ${
                   isSelected ? 'text-[#0055ff]' : 'text-gray-700'
                 }`}>
                   {brand.name}

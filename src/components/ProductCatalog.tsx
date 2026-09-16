@@ -182,8 +182,8 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({
             </div>
           </div>
         ) : (
-          /* Products Grid */
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          /* Products Grid: 2 columns on mobile matching screenshot */
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 sm:gap-4 lg:gap-6">
             {filtered.map((product) => {
               const discount = Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100);
 
@@ -191,21 +191,25 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({
                 <div
                   key={product.id}
                   onClick={() => onSelectProduct(product)}
-                  className="group bg-white rounded-2xl border border-gray-200 hover:border-[#0055ff] hover:shadow-xl transition-all duration-200 flex flex-col justify-between overflow-hidden cursor-pointer"
+                  className="group bg-white rounded-2xl border border-gray-200 hover:border-[#0055ff] hover:shadow-lg transition-all duration-200 flex flex-col justify-between overflow-hidden cursor-pointer"
                   id={`product-card-${product.id}`}
                 >
                   {/* Top Image Box */}
-                  <div className="relative bg-gray-50/70 p-4 aspect-4/3 flex items-center justify-center overflow-hidden border-b border-gray-100">
+                  <div className="relative bg-gray-50/60 p-2.5 sm:p-4 aspect-square sm:aspect-4/3 flex items-center justify-center overflow-hidden border-b border-gray-100">
                     
-                    {/* Badge */}
-                    {product.badge && (
-                      <span className="absolute top-3 left-3 bg-[#0055ff] text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow-xs">
+                    {/* Green Discount Badge on Top-Left matching screenshot */}
+                    {discount > 0 ? (
+                      <span className="absolute top-2 left-2 sm:top-2.5 sm:left-2.5 bg-[#00a859] text-white text-[9px] sm:text-[11px] font-black px-1.5 sm:px-2 py-0.5 rounded-md shadow-xs z-10 uppercase tracking-tight">
+                        {discount}% OFF
+                      </span>
+                    ) : product.badge ? (
+                      <span className="absolute top-2 left-2 bg-[#0055ff] text-white text-[9px] sm:text-[10px] font-bold px-1.5 py-0.5 rounded-md shadow-xs z-10">
                         {product.badge}
                       </span>
-                    )}
+                    ) : null}
 
                     {/* Condition Pill */}
-                    <span className="absolute top-3 right-3 bg-white/90 text-gray-700 text-[10px] font-semibold px-2 py-0.5 rounded-md border border-gray-200 shadow-2xs">
+                    <span className="absolute top-2 right-2 bg-white/90 text-gray-700 text-[8px] sm:text-[10px] font-bold px-1.5 py-0.5 rounded border border-gray-200 shadow-2xs z-10">
                       {product.condition}
                     </span>
 
@@ -217,8 +221,8 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({
                       referrerPolicy="no-referrer"
                     />
 
-                    {/* Quick view icon overlay on hover */}
-                    <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    {/* Quick view icon overlay on hover (desktop) */}
+                    <div className="hidden sm:flex absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity items-center justify-center pointer-events-none">
                       <span className="bg-white/95 text-gray-800 text-xs font-bold px-3 py-1.5 rounded-full shadow flex items-center gap-1">
                         <Eye className="w-3.5 h-3.5" /> Quick View
                       </span>
@@ -226,80 +230,62 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({
                   </div>
 
                   {/* Body Content */}
-                  <div className="p-4 flex-1 flex flex-col justify-between">
+                  <div className="p-2.5 sm:p-4 flex-1 flex flex-col justify-between">
                     <div>
                       {/* Brand & Rating */}
-                      <div className="flex items-center justify-between text-xs text-gray-500 mb-1">
-                        <span className="font-bold text-[#0055ff] tracking-wider uppercase text-[11px]">
+                      <div className="flex items-center justify-between text-[10px] sm:text-xs text-gray-500 mb-1">
+                        <span className="font-bold text-[#0055ff] tracking-wider uppercase">
                           {product.brand}
                         </span>
-                        <div className="flex items-center gap-1 font-semibold text-gray-800">
-                          <Star className="w-3 h-3 text-amber-400 fill-current" />
+                        <div className="flex items-center gap-0.5 sm:gap-1 font-semibold text-gray-800">
+                          <Star className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-amber-400 fill-current" />
                           <span>{product.rating}</span>
-                          <span className="text-[10px] text-gray-400">({product.reviewsCount})</span>
                         </div>
                       </div>
 
                       {/* Product Name */}
-                      <h3 className="text-sm font-bold text-gray-900 line-clamp-2 leading-snug group-hover:text-[#0055ff] transition">
+                      <h3 className="text-xs sm:text-sm font-bold text-gray-900 line-clamp-2 leading-snug group-hover:text-[#0055ff] transition">
                         {product.name}
                       </h3>
 
                       {/* Warranty tag */}
-                      <div className="mt-2 flex items-center gap-1 text-[11px] text-green-700 font-medium">
-                        <ShieldCheck className="w-3.5 h-3.5 text-green-600 shrink-0" />
-                        <span>{product.warranty}</span>
-                      </div>
-
-                      {/* Features mini chips */}
-                      <div className="mt-2.5 flex flex-wrap gap-1">
-                        {product.features.slice(0, 2).map((feat, i) => (
-                          <span
-                            key={i}
-                            className="bg-gray-100 text-gray-600 text-[10px] px-1.5 py-0.5 rounded"
-                          >
-                            {feat}
-                          </span>
-                        ))}
+                      <div className="mt-1 sm:mt-1.5 flex items-center gap-1 text-[9px] sm:text-[11px] text-green-700 font-medium truncate">
+                        <ShieldCheck className="w-3 h-3 text-green-600 shrink-0" />
+                        <span className="truncate">{product.warranty}</span>
                       </div>
                     </div>
 
                     {/* Price & Action Row */}
-                    <div className="mt-4 pt-3 border-t border-gray-100">
-                      <div className="flex items-baseline gap-2 mb-2.5">
-                        <span className="text-lg font-extrabold text-gray-900">
+                    <div className="mt-2.5 sm:mt-4 pt-2 border-t border-gray-100">
+                      <div className="flex flex-wrap items-baseline gap-1 sm:gap-2 mb-2">
+                        <span className="text-sm sm:text-lg font-extrabold text-gray-900">
                           ₹{product.price.toLocaleString('en-IN')}
                         </span>
                         {product.originalPrice > product.price && (
-                          <>
-                            <span className="text-xs text-gray-400 line-through">
-                              ₹{product.originalPrice.toLocaleString('en-IN')}
-                            </span>
-                            <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-1 rounded">
-                              {discount}% OFF
-                            </span>
-                          </>
+                          <span className="text-[10px] sm:text-xs text-gray-400 line-through">
+                            ₹{product.originalPrice.toLocaleString('en-IN')}
+                          </span>
                         )}
                       </div>
 
-                      <div className="grid grid-cols-2 gap-2">
+                      <div className="grid grid-cols-2 gap-1.5 sm:gap-2">
                         {/* Add to Cart Button */}
                         <button
                           onClick={(e) => handleAdd(product, e)}
-                          className={`py-2 px-2 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5 ${
+                          className={`py-1.5 sm:py-2 px-1 sm:px-2 rounded-lg sm:rounded-xl text-[10px] sm:text-xs font-bold transition flex items-center justify-center gap-1 cursor-pointer ${
                             addedId === product.id
                               ? 'bg-green-600 text-white'
-                              : 'bg-[#0055ff] text-white hover:bg-[#0044cc]'
+                              : 'bg-[#0055ff] text-white hover:bg-[#0044cc] active:scale-95'
                           }`}
                           id={`add-cart-btn-${product.id}`}
                         >
                           {addedId === product.id ? (
                             <>
-                              <Check className="w-3.5 h-3.5" /> Added
+                              <Check className="w-3 h-3" /> <span className="hidden sm:inline">Added</span>
                             </>
                           ) : (
                             <>
-                              <ShoppingBag className="w-3.5 h-3.5" /> Add to Cart
+                              <ShoppingBag className="w-3 h-3" /> <span>Add</span>
                             </>
                           )}
                         </button>
@@ -307,14 +293,14 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({
                         {/* WhatsApp Buy / Inquiry Button */}
                         <button
                           onClick={(e) => handleWhatsAppOrder(product, e)}
-                          className="py-2 px-2 rounded-xl text-xs font-bold bg-green-50 text-green-700 hover:bg-green-100 border border-green-200 transition flex items-center justify-center gap-1"
+                          className="py-1.5 sm:py-2 px-1 sm:px-2 rounded-lg sm:rounded-xl text-[10px] sm:text-xs font-bold bg-green-50 text-green-700 hover:bg-green-100 border border-green-200 active:scale-95 transition flex items-center justify-center gap-1 cursor-pointer"
                           title="Order or inquire on WhatsApp"
                           id={`whatsapp-btn-${product.id}`}
                         >
-                          <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                          <svg className="w-3 h-3 fill-current shrink-0" viewBox="0 0 24 24">
                             <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.09c-1.52 0-3.02-.41-4.32-1.18l-.31-.18-3.21.84.86-3.13-.2-.32a8.03 8.03 0 0 1-1.23-4.31c0-4.47 3.64-8.1 8.11-8.1 2.17 0 4.2 0.84 5.73 2.38a8.058 8.058 0 0 1 2.38 5.73c0 4.47-3.64 8.08-8.11 8.08zm4.44-6.07c-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.45-1.35-1.69-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.41-.41-.56-.42l-.48-.01c-.16 0-.42.06-.65.3-.22.24-.87.85-.87 2.07s.89 2.4 1.01 2.57c.12.16 1.75 2.67 4.23 3.75.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28z"/>
                           </svg>
-                          <span>WhatsApp</span>
+                          <span className="truncate">Chat</span>
                         </button>
                       </div>
 

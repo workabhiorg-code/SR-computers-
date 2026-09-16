@@ -52,18 +52,17 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header className="bg-[#0055ff] text-white shadow-md sticky top-0 z-40">
-      {/* Top Main Bar */}
-      <div 
-        className="max-w-7xl mx-auto px-4 sm:px-6 pb-2"
-        style={{ paddingTop: '0.5cm' }}
-      >
-        <div className="flex items-center justify-between gap-2 sm:gap-4 pb-2">
+      {/* Top Header Container */}
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 pt-2.5 pb-2.5">
+        
+        {/* Row 1: Mobile Hamburger + Logo + (User, Heart, Cart Action Icons) */}
+        <div className="flex items-center justify-between gap-2 sm:gap-4">
           
-          {/* Top Left: Hamburger Menu Button (Mobile/Phone ONLY) + Store Logo */}
-          <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
+          {/* Left: Hamburger Menu Button + Store Logo */}
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             <button
               onClick={() => setIsMenuOpen(true)}
-              className="flex md:hidden min-w-[44px] min-h-[44px] items-center justify-center p-2 rounded-xl bg-white/15 hover:bg-white/25 active:bg-white/30 active:scale-95 text-white transition shrink-0 border border-white/25 shadow-xs focus:outline-none focus:ring-2 focus:ring-cyan-300"
+              className="flex items-center justify-center w-10 h-10 -ml-1 rounded-xl text-white hover:bg-white/15 active:scale-95 transition shrink-0 focus:outline-none focus:ring-2 focus:ring-white/40"
               title="Open Navigation Menu"
               aria-label="Open Navigation Menu"
               id="header-hamburger-btn"
@@ -77,91 +76,78 @@ export const Header: React.FC<HeaderProps> = ({
               className="flex items-center gap-1.5 sm:gap-2 text-left focus:outline-none group shrink-0"
               id="header-logo-btn"
             >
-              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-white/10 flex items-center justify-center p-1 sm:p-1.5 border border-white/25 group-hover:bg-white/20 transition">
+              <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-white/15 flex items-center justify-center p-1 sm:p-1.5 border border-white/30 group-hover:bg-white/25 transition shadow-xs">
                 <svg viewBox="0 0 100 100" className="w-full h-full text-white fill-current">
                   <path d="M20,15 L70,15 C85,15 85,45 70,45 L40,45 L75,85 L50,85 L20,50 L35,50 L35,32 L20,32 Z" />
                 </svg>
               </div>
-              <div>
-                <div className="flex items-baseline gap-1">
-                  <span className="font-extrabold text-base sm:text-2xl tracking-tight text-white flex items-center">
-                    S<span className="text-cyan-300">R</span>&nbsp;COMPUTER
-                  </span>
-                </div>
-                <p className="text-[10px] tracking-wider uppercase text-blue-100 font-medium hidden sm:block">
+              <div className="flex flex-col">
+                <span className="font-extrabold text-lg sm:text-2xl tracking-tight text-white flex items-center leading-none">
+                  S<span className="text-cyan-300">R</span>&nbsp;COMPUTER
+                </span>
+                <span className="text-[9px] tracking-wider uppercase text-blue-100 font-semibold hidden sm:block mt-0.5">
                   Retail Computers & Accessories • 4.9★
-                </p>
+                </span>
               </div>
             </button>
           </div>
 
-          {/* Search Bar - Responsive rounded pill */}
-          <div className="flex-1 max-w-xl mx-1.5 sm:mx-6">
-            <div className="relative">
+          {/* Desktop Search Bar (hidden on mobile, shown on md+) */}
+          <div className="hidden md:flex flex-1 max-w-xl mx-4 lg:mx-8">
+            <div className="relative w-full">
               <input
                 type="text"
-                id="header-search-input"
+                id="header-desktop-search-input"
                 value={searchQuery}
                 onChange={(e) => onSearchChange(e.target.value)}
-                placeholder="Search products..."
-                className="w-full pl-4 pr-9 sm:pl-5 sm:pr-11 py-2 rounded-full bg-white text-gray-800 placeholder-gray-400 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-cyan-300 shadow-inner"
+                placeholder="Search for Inkjet Printer, Laptops, Toners, Accessories..."
+                className="w-full pl-5 pr-11 py-2.5 rounded-full bg-white text-gray-800 placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-300 shadow-inner"
               />
-              <div className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none">
-                <Search className="w-4 h-4" />
+              <div className="absolute right-3.5 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none">
+                <Search className="w-4 h-4 text-gray-500" />
               </div>
             </div>
           </div>
 
-          {/* Right Action Icons: Account, Wishlist, Cart (with badge), WhatsApp */}
-          <div className="flex items-center gap-1.5 sm:gap-4 shrink-0">
-            {/* Account Icon (Desktop/Tablet) */}
+          {/* Right Action Icons: User Account, Wishlist Heart, Cart (with badge count) */}
+          <div className="flex items-center gap-1 sm:gap-3 shrink-0">
+            {/* Account Icon */}
             <button
               onClick={onOpenAccount}
-              className="hidden sm:flex min-w-[40px] min-h-[40px] items-center justify-center p-1.5 hover:bg-white/10 rounded-full transition relative text-white"
+              className="flex w-9 h-9 sm:w-10 sm:h-10 items-center justify-center p-1.5 hover:bg-white/15 active:scale-95 rounded-full transition relative text-white"
               title="My Account"
+              aria-label="My Account"
               id="header-account-btn"
             >
               <User className="w-5 h-5 sm:w-6 sm:h-6" />
             </button>
 
-            {/* Wishlist Heart Icon (Desktop/Tablet) */}
+            {/* Wishlist Heart Icon */}
             <button
               onClick={() => onSelectCategory('sale')}
-              className="hidden sm:flex min-w-[40px] min-h-[40px] items-center justify-center p-1.5 hover:bg-white/10 rounded-full transition relative text-white"
+              className="flex w-9 h-9 sm:w-10 sm:h-10 items-center justify-center p-1.5 hover:bg-white/15 active:scale-95 rounded-full transition relative text-white"
               title="Wishlist"
+              aria-label="Wishlist"
               id="header-wishlist-btn"
             >
               <Heart className="w-5 h-5 sm:w-6 sm:h-6" />
               {wishlistCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-amber-400 text-gray-900 text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">
+                <span className="absolute 1 right-1 bg-amber-400 text-gray-900 text-[10px] font-extrabold rounded-full w-4 h-4 flex items-center justify-center shadow-xs">
                   {wishlistCount}
                 </span>
               )}
             </button>
 
-            {/* WhatsApp Icon */}
-            <a
-              href={`https://wa.me/${STORE_INFO.whatsapp}?text=${encodeURIComponent("Hello S R Computer, I would like to inquire about your computers, laptops, printers, and accessories.")}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex min-w-[40px] min-h-[40px] items-center justify-center p-2 hover:bg-white/10 rounded-full transition text-white hover:text-green-300 active:scale-95"
-              title="Chat on WhatsApp"
-              id="header-whatsapp-link"
-            >
-              <svg className="w-5 h-5 sm:w-6 sm:h-6 fill-current" viewBox="0 0 24 24">
-                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.09c-1.52 0-3.02-.41-4.32-1.18l-.31-.18-3.21.84.86-3.13-.2-.32a8.03 8.03 0 0 1-1.23-4.31c0-4.47 3.64-8.1 8.11-8.1 2.17 0 4.2 0.84 5.73 2.38a8.058 8.058 0 0 1 2.38 5.73c0 4.47-3.64 8.08-8.11 8.08zm4.44-6.07c-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.45-1.35-1.69-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.41-.41-.56-.42l-.48-.01c-.16 0-.42.06-.65.3-.22.24-.87.85-.87 2.07s.89 2.4 1.01 2.57c.12.16 1.75 2.67 4.23 3.75.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28z"/>
-              </svg>
-            </a>
-
             {/* Cart Icon with badge count */}
             <button
               onClick={onOpenCart}
-              className="flex min-w-[44px] min-h-[44px] items-center justify-center p-2 hover:bg-white/10 active:scale-95 rounded-full transition relative text-white"
-              title="View Cart"
+              className="flex w-9 h-9 sm:w-10 sm:h-10 items-center justify-center p-1.5 hover:bg-white/15 active:scale-95 rounded-full transition relative text-white"
+              title="Shopping Cart"
+              aria-label="Shopping Cart"
               id="header-cart-btn"
             >
               <ShoppingBag className="w-5 h-5 sm:w-6 sm:h-6" />
-              <span className="absolute 1 right-1 bg-white text-[#0055ff] font-black text-[11px] rounded-full w-4 h-4 flex items-center justify-center shadow">
+              <span className="absolute -top-0.5 -right-0.5 bg-white text-[#0055ff] font-black text-[11px] rounded-full w-4 h-4 flex items-center justify-center shadow-md">
                 {cartCount}
               </span>
             </button>
@@ -169,8 +155,25 @@ export const Header: React.FC<HeaderProps> = ({
 
         </div>
 
+        {/* Row 2: Mobile Search Bar (Matching screenshot full-width rounded pill) */}
+        <div className="md:hidden mt-2.5">
+          <div className="relative w-full">
+            <input
+              type="text"
+              id="header-mobile-search-input"
+              value={searchQuery}
+              onChange={(e) => onSearchChange(e.target.value)}
+              placeholder="Search for Inkjet Printer"
+              className="w-full pl-4 pr-10 py-2 rounded-full bg-white text-gray-900 placeholder-gray-400 text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-cyan-300 shadow-inner"
+            />
+            <div className="absolute right-3.5 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none">
+              <Search className="w-4 h-4 text-gray-500" />
+            </div>
+          </div>
+        </div>
+
         {/* Sub Navigation Links for Website Version - Centered & Aesthetic */}
-        <nav className="hidden md:flex items-center justify-center gap-6 lg:gap-8 py-2 overflow-x-auto text-xs sm:text-sm font-medium border-t border-white/85 scrollbar-none">
+        <nav className="hidden md:flex items-center justify-center gap-6 lg:gap-8 pt-3 pb-1 overflow-x-auto text-xs sm:text-sm font-medium border-t border-white/20 mt-3 scrollbar-none">
           <button 
             onClick={() => onSelectCategory('all')} 
             className="hover:text-cyan-200 transition-colors duration-150 shrink-0 hover:underline underline-offset-4 py-1"
