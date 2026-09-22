@@ -96,15 +96,15 @@ export const GOOGLE_REVIEWS: Review[] = [
 
 export const CATEGORIES = [
   { id: "sale", name: "New Arrivals", isSale: true, icon: "SALE" },
-  { id: "mono", name: "Mono Printers", image: "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=200&auto=format&fit=crop&q=80" },
-  { id: "all-in-one", name: "All-in-One Printers", image: "https://images.unsplash.com/photo-1562408590-e32931084e23?w=200&auto=format&fit=crop&q=80" },
-  { id: "wifi", name: "Wi-Fi Printers", image: "https://images.unsplash.com/photo-1589492477829-5e65395b66cc?w=200&auto=format&fit=crop&q=80" },
-  { id: "duplexer", name: "Duplexer Printers", image: "https://images.unsplash.com/photo-1562408590-e32931084e23?w=200&auto=format&fit=crop&q=80" },
-  { id: "thermal", name: "Thermal Printers", image: "https://images.unsplash.com/photo-1526738549149-8e07eca6c147?w=200&auto=format&fit=crop&q=80" },
-  { id: "laptops", name: "Brand Laptops", image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=200&auto=format&fit=crop&q=80" },
-  { id: "toners", name: "Original Toners", image: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=200&auto=format&fit=crop&q=80" },
-  { id: "accessories", name: "Keyboards & Mice", image: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=200&auto=format&fit=crop&q=80" },
-  { id: "storage", name: "SSD Storage", image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=200&auto=format&fit=crop&q=80" }
+  { id: "mono", name: "Mono Printers", image: "/images/categories/cat-mono-printer.jpg" },
+  { id: "all-in-one", name: "All-in-One Printers", image: "/images/categories/cat-all-in-one-printer.jpg" },
+  { id: "wifi", name: "Wi-Fi Printers", image: "/images/categories/cat-wifi-printer.jpg" },
+  { id: "duplexer", name: "Duplexer Printers", image: "/images/categories/cat-duplex-printer.jpg" },
+  { id: "thermal", name: "Thermal Printers", image: "/images/categories/cat-thermal-printer.jpg" },
+  { id: "laptops", name: "Brand Laptops", image: "/images/categories/cat-brand-laptops.jpg" },
+  { id: "toners", name: "Original Toners", image: "/images/categories/cat-original-toners.jpg" },
+  { id: "accessories", name: "Keyboards & Mice", image: "/images/categories/cat-keyboards-mice.jpg" },
+  { id: "storage", name: "SSD Storage", image: "/images/categories/cat-ssd-storage.jpg" }
 ];
 
 export const BRANDS: Brand[] = [
@@ -112,49 +112,49 @@ export const BRANDS: Brand[] = [
     id: "hp",
     name: "HP",
     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/HP_logo_2012.svg/300px-HP_logo_2012.svg.png",
-    productImage: "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=300&auto=format&fit=crop&q=80"
+    productImage: "/images/brands/brand-hp.jpg"
   },
   {
     id: "brother",
     name: "Brother",
     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Brother_logo.svg/320px-Brother_logo.svg.png",
-    productImage: "https://images.unsplash.com/photo-1562408590-e32931084e23?w=300&auto=format&fit=crop&q=80"
+    productImage: "/images/brands/brand-brother.jpg"
   },
   {
     id: "canon",
     name: "Canon",
     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Canon_wordmark.svg/320px-Canon_wordmark.svg.png",
-    productImage: "https://images.unsplash.com/photo-1589492477829-5e65395b66cc?w=300&auto=format&fit=crop&q=80"
+    productImage: "/images/brands/brand-canon.jpg"
   },
   {
     id: "samsung",
     name: "Samsung",
     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/320px-Samsung_Logo.svg.png",
-    productImage: "https://images.unsplash.com/photo-1526738549149-8e07eca6c147?w=300&auto=format&fit=crop&q=80"
+    productImage: "/images/brands/brand-samsung.jpg"
   },
   {
     id: "epson",
     name: "Epson",
     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Epson_logo.svg/320px-Epson_logo.svg.png",
-    productImage: "https://images.unsplash.com/photo-1526738549149-8e07eca6c147?w=300&auto=format&fit=crop&q=80"
+    productImage: "/images/brands/brand-epson.jpg"
   },
   {
     id: "ricoh",
     name: "Ricoh",
     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Ricoh_logo.svg/320px-Ricoh_logo.svg.png",
-    productImage: "https://images.unsplash.com/photo-1562408590-e32931084e23?w=300&auto=format&fit=crop&q=80"
+    productImage: "/images/brands/brand-ricoh.jpg"
   },
   {
     id: "dell",
     name: "Dell",
     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dell_Logo.svg/300px-Dell_Logo.svg.png",
-    productImage: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&auto=format&fit=crop&q=80"
+    productImage: "/images/brands/brand-dell.jpg"
   },
   {
     id: "lenovo",
     name: "Lenovo",
     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Lenovo_logo_2015.svg/320px-Lenovo_logo_2015.svg.png",
-    productImage: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=300&auto=format&fit=crop&q=80"
+    productImage: "/images/brands/brand-lenovo.jpg"
   }
 ];
 
@@ -168,7 +168,7 @@ export const PRODUCTS: Product[] = [
     originalPrice: 48990,
     rating: 4.9,
     reviewsCount: 28,
-    image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&auto=format&fit=crop&q=80",
+    image: "/images/products/hp-15s-laptop.jpg",
     badge: "Student Bestseller",
     condition: "100% Brand New",
     warranty: "1 Year Official HP Onsite Warranty",
@@ -185,7 +185,7 @@ export const PRODUCTS: Product[] = [
     originalPrice: 68990,
     rating: 4.9,
     reviewsCount: 19,
-    image: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=600&auto=format&fit=crop&q=80",
+    image: "/images/products/lenovo-ideapad-slim3.jpg",
     badge: "Performance Pick",
     condition: "100% Brand New",
     warranty: "1 Year Lenovo Brand Warranty",
@@ -202,7 +202,7 @@ export const PRODUCTS: Product[] = [
     originalPrice: 45990,
     rating: 4.8,
     reviewsCount: 22,
-    image: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=600&auto=format&fit=crop&q=80",
+    image: "/images/products/dell-inspiron-3520.jpg",
     badge: "Reliable Daily Driver",
     condition: "100% Brand New",
     warranty: "1 Year Dell Hardware Warranty",
@@ -219,7 +219,7 @@ export const PRODUCTS: Product[] = [
     originalPrice: 26499,
     rating: 4.9,
     reviewsCount: 31,
-    image: "https://images.unsplash.com/photo-1562408590-e32931084e23?w=600&auto=format&fit=crop&q=80",
+    image: "/images/products/brother-dcp-l2541dw.jpg",
     badge: "Auto Duplex",
     condition: "100% Brand New",
     warranty: "1 Year Official Brother Warranty",
@@ -236,7 +236,7 @@ export const PRODUCTS: Product[] = [
     originalPrice: 15999,
     rating: 4.9,
     reviewsCount: 45,
-    image: "https://images.unsplash.com/photo-1526738549149-8e07eca6c147?w=600&auto=format&fit=crop&q=80",
+    image: "/images/products/epson-ecotank-l3210.jpg",
     badge: "Lowest Cost Per Page",
     condition: "100% Brand New",
     warranty: "1 Year or 30,000 Pages Epson Warranty",
@@ -253,7 +253,7 @@ export const PRODUCTS: Product[] = [
     originalPrice: 17800,
     rating: 4.8,
     reviewsCount: 26,
-    image: "https://images.unsplash.com/photo-1589492477829-5e65395b66cc?w=600&auto=format&fit=crop&q=80",
+    image: "/images/products/hp-smart-tank-580.jpg",
     badge: "Smart Wi-Fi",
     condition: "100% Brand New",
     warranty: "1 Year HP Onsite Warranty + 6M Bonus on Registration",
@@ -270,7 +270,7 @@ export const PRODUCTS: Product[] = [
     originalPrice: 17995,
     rating: 5.0,
     reviewsCount: 52,
-    image: "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=600&auto=format&fit=crop&q=80",
+    image: "/images/products/canon-lbp2900b.jpg",
     badge: "Legendary Workhorse",
     condition: "100% Brand New",
     warranty: "1 Year Canon Official Warranty",
@@ -287,7 +287,7 @@ export const PRODUCTS: Product[] = [
     originalPrice: 2995,
     rating: 4.9,
     reviewsCount: 38,
-    image: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=600&auto=format&fit=crop&q=80",
+    image: "/images/products/logitech-mk295-combo.jpg",
     badge: "SilentTouch Tech",
     condition: "100% Brand New",
     warranty: "1 Year Logitech Warranty",
@@ -304,7 +304,7 @@ export const PRODUCTS: Product[] = [
     originalPrice: 4500,
     rating: 4.9,
     reviewsCount: 64,
-    image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=600&auto=format&fit=crop&q=80",
+    image: "/images/products/crucial-bx500-ssd.jpg",
     badge: "Instant Speedup",
     condition: "100% Brand New",
     warranty: "3 Years Crucial Brand Warranty",
@@ -321,7 +321,7 @@ export const PRODUCTS: Product[] = [
     originalPrice: 8990,
     rating: 4.9,
     reviewsCount: 33,
-    image: "https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=600&auto=format&fit=crop&q=80",
+    image: "/images/products/kingston-nv2-nvme-ssd.jpg",
     badge: "Gen 4x4 Speed",
     condition: "100% Brand New",
     warranty: "3 Years Kingston Brand Warranty",
@@ -338,7 +338,7 @@ export const PRODUCTS: Product[] = [
     originalPrice: 3499,
     rating: 4.8,
     reviewsCount: 29,
-    image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&auto=format&fit=crop&q=80",
+    image: "/images/products/tplink-archer-c6-router.jpg",
     badge: "Gigabit Speed",
     condition: "100% Brand New",
     warranty: "3 Years TP-Link Warranty",
@@ -355,7 +355,7 @@ export const PRODUCTS: Product[] = [
     originalPrice: 4650,
     rating: 4.9,
     reviewsCount: 41,
-    image: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=600&auto=format&fit=crop&q=80",
+    image: "/images/products/hp-12a-toner.jpg",
     badge: "100% Original",
     condition: "100% Brand New",
     warranty: "HP Security Hologram Protected",
@@ -369,25 +369,25 @@ export const STORE_GALLERY = [
   {
     title: "S R COMPUTER Retail Showroom & Laptop Display",
     location: "Baramunda, Bhubaneswar",
-    image: "https://images.unsplash.com/photo-1526738549149-8e07eca6c147?w=800&auto=format&fit=crop&q=80",
+    image: "/images/gallery/gallery-showroom.jpg",
     caption: "Our official retail showroom located at Soubhagya Nagar, Baramunda"
   },
   {
     title: "Brand New Laptops & Customer Consultation",
     location: "S R Computer Baramunda",
-    image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&auto=format&fit=crop&q=80",
+    image: "/images/gallery/gallery-laptops.jpg",
     caption: "Personalized student and professional laptop guidance by our experienced staff"
   },
   {
     title: "Genuine Computer Accessories & Storage Shelf",
     location: "Showroom Display",
-    image: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=800&auto=format&fit=crop&q=80",
+    image: "/images/gallery/gallery-accessories.jpg",
     caption: "Wide range of original keyboards, mice, SSDs, RAM, routers, and original toners"
   },
   {
     title: "Printers & Live Demonstration Counter",
     location: "S R Computer Tech Desk",
-    image: "https://images.unsplash.com/photo-1562408590-e32931084e23?w=800&auto=format&fit=crop&q=80",
+    image: "/images/gallery/gallery-printers.jpg",
     caption: "Live print quality demo, unboxing, and driver setup assistance before purchase"
   }
 ];
@@ -396,22 +396,22 @@ export const SECONDARY_CATEGORIES = [
   {
     id: "laptops",
     name: "Brand Laptops",
-    image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=160&auto=format&fit=crop&q=80"
+    image: "/images/categories/cat-brand-laptops.jpg"
   },
   {
     id: "all-in-one",
     name: "All-in-One Printers",
-    image: "https://images.unsplash.com/photo-1562408590-e32931084e23?w=160&auto=format&fit=crop&q=80"
+    image: "/images/categories/cat-all-in-one-printer.jpg"
   },
   {
     id: "accessories",
     name: "Peripherals & Mice",
-    image: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=160&auto=format&fit=crop&q=80"
+    image: "/images/categories/cat-keyboards-mice.jpg"
   },
   {
     id: "storage",
     name: "Internal SSDs",
-    image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=160&auto=format&fit=crop&q=80"
+    image: "/images/categories/cat-ssd-storage.jpg"
   }
 ];
 
@@ -422,7 +422,7 @@ export const VIDEO_REELS: VideoReel[] = [
     location: "Baramunda, Bhubaneswar",
     rating: 5,
     verified: true,
-    videoThumbnail: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=500&auto=format&fit=crop&q=80",
+    videoThumbnail: "/images/products/hp-15s-laptop.jpg",
     videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-hands-holding-a-packaged-delivery-box-43187-large.mp4",
     caption: "The staff is very polite and helped me choose the best laptop for my college studies! Got original accessories too.",
     productMentioned: "HP 15s Core i3 Thin & Light Laptop"
@@ -433,7 +433,7 @@ export const VIDEO_REELS: VideoReel[] = [
     location: "Bhubaneswar, Odisha",
     rating: 5,
     verified: true,
-    videoThumbnail: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=80",
+    videoThumbnail: "/images/products/brother-dcp-l2541dw.jpg",
     videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-hands-holding-a-packaged-delivery-box-43187-large.mp4",
     caption: "Bought a brand new Brother Auto-Duplex printer for my coaching institute. Excellent retail price and same-day delivery!",
     productMentioned: "Brother DCP-L2541DW Multi-Function"
@@ -444,7 +444,7 @@ export const VIDEO_REELS: VideoReel[] = [
     location: "Bhubaneswar, Odisha",
     rating: 5,
     verified: true,
-    videoThumbnail: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=80",
+    videoThumbnail: "/images/products/epson-ecotank-l3210.jpg",
     videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-hands-holding-a-packaged-delivery-box-43187-large.mp4",
     caption: "Quality service, very friendly behavior. Best computer retail shop in Soubhagya Nagar for genuine IT hardware!",
     productMentioned: "Epson EcoTank L3210 All-in-One"
@@ -455,7 +455,7 @@ export const VIDEO_REELS: VideoReel[] = [
     location: "Soubhagya Nagar, Bhubaneswar",
     rating: 5,
     verified: true,
-    videoThumbnail: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&auto=format&fit=crop&q=80",
+    videoThumbnail: "/images/products/crucial-bx500-ssd.jpg",
     videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-hands-holding-a-packaged-delivery-box-43187-large.mp4",
     caption: "Upgraded my laptop with Crucial 500GB SSD in 20 minutes with genuine bill. Boots up in 5 seconds now!",
     productMentioned: "Crucial BX500 500GB SSD Upgrade"
@@ -466,7 +466,7 @@ export const VIDEO_REELS: VideoReel[] = [
     location: "Bhubaneswar, Odisha",
     rating: 5,
     verified: true,
-    videoThumbnail: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=80",
+    videoThumbnail: "/images/products/logitech-mk295-combo.jpg",
     videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-hands-holding-a-packaged-delivery-box-43187-large.mp4",
     caption: "Quick service & best price. S R Computer is definitely one of the top trusted shops for laptops and accessories.",
     productMentioned: "Logitech MK295 Silent Wireless Combo"
@@ -477,7 +477,7 @@ export const VIDEO_REELS: VideoReel[] = [
     location: "Cuttack, Odisha",
     rating: 5,
     verified: true,
-    videoThumbnail: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=80",
+    videoThumbnail: "/images/products/hp-smart-tank-580.jpg",
     videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-hands-holding-a-packaged-delivery-box-43187-large.mp4",
     caption: "Local store pickup at Baramunda. Unboxed brand new sealed HP Smart Tank printer with full demo!",
     productMentioned: "HP Smart Tank 580 Wi-Fi All-in-One"
@@ -492,7 +492,7 @@ export const CUSTOMER_TESTIMONIALS_SLIDER: CustomerTestimonial[] = [
     reviewTitle: "Best laptop for studies and accessories",
     reviewText: "The staff is very polite and helped me choose the best laptop for my studies. Also got an original Dell charger and wireless mouse at best wholesale rates in Baramunda.",
     productName: "HP 15s 12th Gen Intel Core i3 Laptop",
-    productImage: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=200&auto=format&fit=crop&q=80",
+    productImage: "/images/products/hp-15s-laptop.jpg",
     date: "August 2026"
   },
   {
@@ -502,7 +502,7 @@ export const CUSTOMER_TESTIMONIALS_SLIDER: CustomerTestimonial[] = [
     reviewTitle: "Quality service, very friendly behavior",
     reviewText: "Quality service, very friendly behavior. Bought a brand new Brother multi-function laser printer for office and got HP computer accessories. Working flawlessly with official warranty.",
     productName: "Brother DCP-L2541DW Auto-Duplex Laser",
-    productImage: "https://images.unsplash.com/photo-1562408590-e32931084e23?w=200&auto=format&fit=crop&q=80",
+    productImage: "/images/products/brother-dcp-l2541dw.jpg",
     date: "July 2026"
   },
   {
@@ -512,7 +512,7 @@ export const CUSTOMER_TESTIMONIALS_SLIDER: CustomerTestimonial[] = [
     reviewTitle: "Quick service & best price",
     reviewText: "Quick service &best price. S R Computer is definitely one of the top trusted retail shops for laptops, printers, original toners, and desktop accessories in Bhubaneswar.",
     productName: "Logitech MK295 Silent Wireless Combo",
-    productImage: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=200&auto=format&fit=crop&q=80",
+    productImage: "/images/products/logitech-mk295-combo.jpg",
     date: "July 2026"
   },
   {
@@ -522,7 +522,7 @@ export const CUSTOMER_TESTIMONIALS_SLIDER: CustomerTestimonial[] = [
     reviewTitle: "Honest owner and very knowledgeable staff",
     reviewText: "Purchased brand new Epson EcoTank L3210 printer for my retail store. Original sealed box with complete inks, official warranty, and GST invoice.",
     productName: "Epson EcoTank L3210 All-in-One",
-    productImage: "https://images.unsplash.com/photo-1526738549149-8e07eca6c147?w=200&auto=format&fit=crop&q=80",
+    productImage: "/images/products/epson-ecotank-l3210.jpg",
     date: "June 2026"
   },
   {
@@ -532,7 +532,7 @@ export const CUSTOMER_TESTIMONIALS_SLIDER: CustomerTestimonial[] = [
     reviewTitle: "Superfast SSD Upgrade Experience",
     reviewText: "Needed urgent RAM and SSD upgrade for my Dell laptop. Completed in 20 minutes with genuine bill and manufacturer warranty. Highly recommended in Soubhagya Nagar.",
     productName: "Crucial BX500 500GB High-Speed SSD",
-    productImage: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=200&auto=format&fit=crop&q=80",
+    productImage: "/images/products/crucial-bx500-ssd.jpg",
     date: "May 2026"
   },
   {
@@ -542,7 +542,7 @@ export const CUSTOMER_TESTIMONIALS_SLIDER: CustomerTestimonial[] = [
     reviewTitle: "Top Computer Shop in Baramunda",
     reviewText: "Wide collection of brand new laptops, printers, original toner cartridges, and computer components. Excellent post-sale support and guidance.",
     productName: "HP 12A Original Toner Cartridge",
-    productImage: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=200&auto=format&fit=crop&q=80",
+    productImage: "/images/products/hp-12a-toner.jpg",
     date: "May 2026"
   }
 ];
@@ -566,7 +566,7 @@ export const BUYING_GUIDES: BuyingGuide[] = [
     date: "Jan 15, 2026",
     author: "S R COMPUTER Retail Team",
     tags: ["Laptops", "Buying Guide", "Students", "HP", "Lenovo", "Dell"],
-    image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&auto=format&fit=crop&q=80"
+    image: "/images/guides/guide-laptops.jpg"
   },
   {
     id: "guide-2",
@@ -590,7 +590,7 @@ export const BUYING_GUIDES: BuyingGuide[] = [
     date: "Feb 02, 2026",
     author: "S R COMPUTER Retail Team",
     tags: ["Printers", "Ink Tank", "Laser", "Epson", "Brother", "Canon"],
-    image: "https://images.unsplash.com/photo-1562408590-e32931084e23?w=600&auto=format&fit=crop&q=80"
+    image: "/images/guides/guide-printers.jpg"
   },
   {
     id: "guide-3",
@@ -609,7 +609,7 @@ export const BUYING_GUIDES: BuyingGuide[] = [
     date: "Feb 20, 2026",
     author: "S R COMPUTER Retail Team",
     tags: ["Accessories", "Logitech", "SSD", "Crucial", "Networking"],
-    image: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=600&auto=format&fit=crop&q=80"
+    image: "/images/guides/guide-accessories.jpg"
   }
 ];
 

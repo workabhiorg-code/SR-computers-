@@ -1,10 +1,10 @@
 import { Product, StoreOrder, StoreSettings, VideoReview } from '../types';
 import { PRODUCTS, STORE_INFO } from '../data/storeData';
 
-const PRODUCTS_KEY = 'sr_computer_products_v2';
-const ORDERS_KEY = 'sr_computer_orders_v2';
-const SETTINGS_KEY = 'sr_computer_settings_v2';
-const VIDEO_REVIEWS_KEY = 'sr_computer_video_reviews_v2';
+const PRODUCTS_KEY = 'sr_computer_products_v3';
+const ORDERS_KEY = 'sr_computer_orders_v3';
+const SETTINGS_KEY = 'sr_computer_settings_v3';
+const VIDEO_REVIEWS_KEY = 'sr_computer_video_reviews_v3';
 const ADMIN_PIN_KEY = 'sr_computer_admin_pin';
 
 export const DEFAULT_PIN = '1234';
@@ -26,7 +26,7 @@ export const SAMPLE_VIDEO_REVIEWS: VideoReview[] = [
     productName: 'HP 15s 12th Gen Intel Core i3 Laptop',
     rating: 5,
     videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
-    thumbnailUrl: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&auto=format&fit=crop&q=80',
+    thumbnailUrl: '/images/products/hp-15s-laptop.jpg',
     duration: '0:45',
     reviewText: 'Got the best price in Bhubaneswar with official 1-year HP India warranty and original backpack. Very polite staff and honest advice!',
     date: '2026-08-28',
@@ -40,7 +40,7 @@ export const SAMPLE_VIDEO_REVIEWS: VideoReview[] = [
     productName: 'Brother DCP-L2541DW Auto-Duplex Laser Printer',
     rating: 5,
     videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
-    thumbnailUrl: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=800&auto=format&fit=crop&q=80',
+    thumbnailUrl: '/images/products/brother-dcp-l2541dw.jpg',
     duration: '1:10',
     reviewText: 'For my coaching center notes, I needed heavy-duty auto double-sided printing. Staff unboxed it in front of me and gave a complete live demo.',
     date: '2026-09-02',
@@ -54,7 +54,7 @@ export const SAMPLE_VIDEO_REVIEWS: VideoReview[] = [
     productName: 'Epson EcoTank L3250 Wi-Fi All-in-One Color Printer',
     rating: 5,
     videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyBlazes.mp4',
-    thumbnailUrl: 'https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?w=800&auto=format&fit=crop&q=80',
+    thumbnailUrl: '/images/products/epson-ecotank-l3210.jpg',
     duration: '0:52',
     reviewText: 'Bought for home and college assignments. Wireless mobile printing connects in seconds. Saved ₹2,000 compared to online sellers with on-spot GST bill.',
     date: '2026-09-05',
@@ -68,7 +68,7 @@ export const SAMPLE_VIDEO_REVIEWS: VideoReview[] = [
     productName: 'Crucial P3 1TB NVMe SSD & 16GB DDR4 RAM Upgrade',
     rating: 5,
     videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4',
-    thumbnailUrl: 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=800&auto=format&fit=crop&q=80',
+    thumbnailUrl: '/images/products/crucial-bx500-ssd.jpg',
     duration: '1:05',
     reviewText: 'My desktop boot time went from 2 minutes to 8 seconds! Quick installation done in 20 minutes right before my eyes. 100% recommended!',
     date: '2026-09-07',

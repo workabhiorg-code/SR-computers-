@@ -110,7 +110,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
               <div className="relative w-full max-w-sm sm:max-w-md bg-white/10 backdrop-blur-md rounded-2xl p-3 sm:p-4 border border-white/20 shadow-2xl flex items-center justify-center">
                 <div className="relative w-full aspect-4/3 sm:aspect-16/10 rounded-xl overflow-hidden bg-gradient-to-t from-black/40 via-transparent to-transparent flex items-end justify-center">
                   <img
-                    src="https://images.unsplash.com/photo-1562408590-e32931084e23?w=800&auto=format&fit=crop&q=80"
+                    src="/images/hero/hero-printers.jpg"
                     alt="Multi-Function Brand New Printer"
                     className="absolute inset-0 w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-500"
                     referrerPolicy="no-referrer"
@@ -187,7 +187,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
               <div className="relative w-full max-w-sm sm:max-w-md bg-white/10 backdrop-blur-md rounded-2xl p-3 sm:p-4 border border-white/20 shadow-2xl flex items-center justify-center">
                 <div className="relative w-full aspect-4/3 sm:aspect-16/10 rounded-xl overflow-hidden bg-gradient-to-t from-black/40 via-transparent to-transparent flex items-end justify-center">
                   <img
-                    src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&auto=format&fit=crop&q=80"
+                    src="/images/hero/hero-laptops.jpg"
                     alt="HP & Lenovo Student Laptops"
                     className="absolute inset-0 w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-500"
                     referrerPolicy="no-referrer"

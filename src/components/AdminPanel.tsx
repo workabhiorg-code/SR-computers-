@@ -168,7 +168,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
       originalPrice: 24999,
       rating: 4.9,
       reviewsCount: 12,
-      image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&auto=format&fit=crop&q=80',
+      image: '/images/products/hp-15s-laptop.jpg',
       badge: 'New Arrival',
       condition: '100% Brand New',
       warranty: '1 Year Official Manufacturer Warranty',
@@ -197,7 +197,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
       originalPrice: Number(currentProduct.originalPrice) || Number(currentProduct.price) || 0,
       rating: Number(currentProduct.rating) || 4.9,
       reviewsCount: Number(currentProduct.reviewsCount) || 10,
-      image: currentProduct.image || 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&auto=format&fit=crop&q=80',
+      image: currentProduct.image || '/images/products/hp-15s-laptop.jpg',
       badge: currentProduct.badge || '',
       condition: '100% Brand New',
       warranty: currentProduct.warranty || '1 Year Brand Warranty',
@@ -293,9 +293,10 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
       productName: products[0]?.name || 'HP 15s Intel Core i3 Laptop',
       rating: 5,
       videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
-      thumbnailUrl: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&auto=format&fit=crop&q=80',
+      thumbnailUrl: '/images/products/hp-15s-laptop.jpg',
       duration: '0:45',
-      reviewText: 'Excellent experience at S R COMPUTER! Tested the machine in store, got genuine GST invoice and brand warranty.',
+      reviewText: 'Great product and quick delivery from S R COMPUTER!',
+      date: new Date().toISOString().split('T')[0],
       verifiedPurchase: true,
       published: true
     });
@@ -309,19 +310,16 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
 
   const handleSaveVideo = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!currentVideo || !currentVideo.customerName) {
-      alert('Please enter the customer name');
-      return;
-    }
+    if (!currentVideo || !currentVideo.customerName) return;
 
     const fullVideo: VideoReview = {
       id: currentVideo.id || `vid-${Date.now()}`,
       customerName: currentVideo.customerName,
       location: currentVideo.location || 'Bhubaneswar, Odisha',
-      productName: currentVideo.productName || 'Computer System',
+      productName: currentVideo.productName || 'HP Laptop / Printer',
       rating: Number(currentVideo.rating) || 5,
       videoUrl: currentVideo.videoUrl || 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
-      thumbnailUrl: currentVideo.thumbnailUrl || 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&auto=format&fit=crop&q=80',
+      thumbnailUrl: currentVideo.thumbnailUrl || '/images/products/hp-15s-laptop.jpg',
       duration: currentVideo.duration || '0:45',
       reviewText: currentVideo.reviewText || '',
       date: currentVideo.date || new Date().toISOString().slice(0, 10),
